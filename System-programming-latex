@@ -1,0 +1,119 @@
+\documentclass {article}
+
+\author{MUKAUMBA.J.COMFORT}
+\title{SYSTEM PROGRAMMING MIDTERM TEST 2023}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+\section{1}
+\subsection{Q1}What is the output of the following piece of code?\par
+Answer:\underline{A}
+
+\subsection{Q2}What is the output of the following piece of code?\par
+Answer:\underline{C}
+    
+\subsection{Q3}What is the return value of the following function?\\
+Answer:\underline{C}
+
+\subsection{Q4}What is the output of the following piece of code?\par
+Answer:\underline{C}
+
+\subsection{Q5}What is the output of the following piece of code?\\
+Answer:\underline{A}
+
+\subsection{Q6}What is the output of the following piece of code?\\
+Answer:\underline{A}
+
+\subsection{Q7}What is the return value of the following function?\\
+Answer:\underline{A}
+
+\subsection{Q8}What is the output of the following piece of code?\\
+Answer:\underline{C}
+
+\subsection{Q9}What is the output of the following piece of code?\par
+Answer:\underline{A}
+
+\subsection{Q10}What is the value of n after the followiing code is executed?\\
+Answer:\underline{B}
+
+\subsection{Q11}If we have a variable called var of type int, how can we get its address in memory?\\
+Answer:\underline{B}
+
+\subsection{Q12}What is the identifier to print an address with printf?\\
+Answer:\underline{C}
+
+\subsection{Q13}We declare the followiing variable int arr[5];What is the size in memory of the varriable arr?\\
+Answer:\underline{E.20 bytes}
+
+\subsection{Q14}What is the value of n after the following code is executed?\par
+Answer:\underline{A}
+
+\subsection{Q15}What happens when one tries to access an illegal memory location?\par
+Answer:\underline{A}
+
+\subsection{Q16}Is it possible to declare a pointer to a pointer?\\
+Answer:\underline{C}
+
+\subsection{Q17}What is the value of a pointer to a char(on a 64-bit architecture)?\\
+Answer:\underline{B}
+
+\subsection{Q18}We declare the following variable int arr[5];What is the equivalent of typing arr[2]?\\
+Answer:\underline{B}
+
+\subsection{Q19}What is the value of n after the following code is executed?\par
+Answer:\underline{A}
+
+\subsection{Q20}What is the size of a pointer to an int(on a 64-bit architecture)?\par
+Answer:\underline{B}
+
+\subsection{Q21}The process of getting the value that is stored in the memory location pointed to by a pointer is called?\\
+Answer:\underline{C}
+
+\subsection{Q22}What is the value of n after the following code is executed?\par
+Answer:\underline{C}
+
+\section{2}
+\subsection{Q1}Explain what happened in the above code,state the time complexity of the above situation(Use proper terms is important)?\\
+\begin{itemize}
+    \item\underline{1.The main function is called an initial value of 4\\} 
+    \item\underline{2.The print function is called with this value(4) as an argument\\}
+    \item\underline{3.inside print function prints the value of nb.(which is 4),increaments by 1  to become 5, checks if it's less than 10.\\}
+    \item\underline{4.since 5 is less than 10, the print function is called RECURSIVELY with the updated value of nb which is 5.\par}
+    \item\underline{5.This process continues and keeps printing and increamenting the value until nb becomes 10.\\}
+    \item\underline{6.When nb reaches 10,the condition in the if statement is no longer true, and the recursion stops.\\}
+    \item\underline{So the code will print the numbers from 4 to 9 giving the time complexity to be 0(n),where n is the the difference between the initial value(4) and the limit(10).In case,n is 6,so the function will be called 6 times in total.}
+\end{itemize}
+\subsection{Q2.a}How many bytes will each of the below statements allocate?\\
+\begin{itemize}
+    \item 1.malloc(sizeof(int) * 10).Answer:\underline{40 bytes}
+    \item 2.malloc(sizeof(unsigned int) * 2).Answer:\underline{8 bytes}
+    \item 3.malloc((sizeof(char) * 10) + 1).Answer:\underline{11 bytes}
+    \item 4.malloc(10).Answer:\underline{10 bytes}
+    \item 5.malloc(sizeof(char) * 10).Answer:\underline{10 bytes}
+    \item 6.malloc(sizeof(int) * 4).Answer:\underline{16 bytes}
+\end{itemize}
+
+\subsection{Q2.b}What is Valgrind?\par
+Answer:\underline{Valgrind is the program used in memory leak dectection}
+
+\subsection{Q3.a}What will you see on the terminal?\\
+Answer:\underline{B}
+
+\subsection{Q3.b}Answer all the questions\\
+\begin{itemize}
+    \item i.malloc returns a pointer.Answer:\underline{B}
+    \item ii.malloc returns an address.Answer:\underline{B}
+    \item iii.The momery space reserved when calling malloc is on what?Answer:\underline{A}
+    \item iv.You can do this: (char str[] = "Best School" free(str));Answer:\underline{B}
+    \item v.You can do this: (free("Best School"));Answer:\underline{A}
+    \item vi.You can do this: (char *s; s = strdup("Best School"); if(s != NULL){free(s)}).Answer:\underline{B}
+    \item vii.What is wrong with this code:(int cp(void){char *s; s = malloc(12); strcpy(s, "Best School"); return(0);}).Answer:\underline{B}
+\end{itemize}
+
+\subsection{Q4 Pointers and Addresses}In computer science, a pointer is an object in many programming languages that stores a memory address.\\This can be that of another value located in computer memory, or in some causes,that of memory-mapped compter hardware.According to "Wikipedia."\\
+Pointers in C are easy and fun to learn.Some C programming tasks are performed more easly with pointers, and other tasks,such as dynamic memory allocation,cannot be performed without using pointers.\\So it becomes necessary to learn pointers to become a perfect C programmer.\\
+Implement a valid method or function that can swap two variables?\\
+Answer:\underline{(int a, int b){int temp;temp = a;a = b;b = temp;}} 
+\end{document}
